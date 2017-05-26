@@ -23,7 +23,7 @@ set :deploy_to, '/var/www/ruby_thursday_production'
 
 role :app, %w{deploy@104.131.56.222}, my_property: :my_value
 role :web, %w{deploy@104.131.56.222}, other_property: :other_value
-role :db,  %w{deploy@104.131.56.222}, primary: => true
+role :db,  %w{deploy@104.131.56.222}
 
 
 
