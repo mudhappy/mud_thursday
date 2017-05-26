@@ -17,9 +17,13 @@
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-# role :app, %w{deploy@example.com}, my_property: :my_value
-# role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
-# role :db,  %w{deploy@example.com}
+set :branch, 'production'
+set :rails_env, 'production'
+set :deploy_to, '/var/www/ruby_thursday_production'
+
+role :app, %w{deploy@104.131.56.222}, my_property: :my_value
+role :web, %w{deploy@104.131.56.222}, other_property: :other_value
+role :db,  %w{deploy@104.131.56.222}, primary: => true
 
 
 
